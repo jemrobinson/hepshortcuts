@@ -1,0 +1,82 @@
+\ProvidesClass{hepshortcuts}
+\RequirePackage{maybemath}
+\RequirePackage{siunitx}
+\RequirePackage{xspace}
+\AtBeginDocument{\sisetup{detect-mode=true,detect-family=false,detect-display-math=false,detect-shape=false,math-rm=\mathrm,text-rm=\sffamily}}
+
+%% Maths
+\DeclareRobustCommand{\maths}[1]{\ensuremath{\maybebmsf{#1}}}
+
+%% Layout
+\newcommand\boldcolour[2]{\textcolor{#1}{\textbf{#2}}}
+\newcommand\boldtick[1]{\boldcolour{#1}{\checkmark}}
+\newcommand\boldcross[1]{\boldcolour{#1}{\maths{X}}}
+
+%% Hyperlinks
+\newcommand\link[2]{\boldcolour{desycyan}{\underline{\href{#1}{#2}}}}
+
+%% Physics quantities
+\DeclareRobustCommand{\ET}{\maths{E_{\mathrm{T}}}\xspace}
+\DeclareRobustCommand{\pT}{\maths{p_{\mathrm{T}}}\xspace}
+\DeclareRobustCommand{\pTone}{\ensuremath{p_{\mathrm{T},1}}\xspace}
+\DeclareRobustCommand{\pTtwo}{\ensuremath{p_{\mathrm{T},2}}\xspace}
+
+%% Jet algorithms
+\DeclareRobustCommand{\akt}{\hbox{anti-\maths{k_t}}\xspace}
+\DeclareRobustCommand{\kt}{\maths{k_\perp}\xspace}
+\DeclareRobustCommand{\CA}{Cambridge-Aachen\xspace}
+
+%% Mathematical terminology
+\DeclareRobustCommand{\angles}[1]{\maths{\left\langle{#1}\right\rangle}}
+
+%% Monte Carlo
+\DeclareRobustCommand{\MC}{Monte Carlo\xspace}
+\DeclareRobustCommand{\Alpgen}{\textsc{alpgen}\xspace}
+\DeclareRobustCommand{\aMCatNLO}{\textsc{aMC@NLO}\xspace}
+\DeclareRobustCommand{\Ariadne}{\textsc{ariadne}\xspace}
+\DeclareRobustCommand{\HEJ}{\textsc{hej}\xspace}
+\DeclareRobustCommand{\Herwig}{\maybebmsf{\textsc{herwig}}\xspace}
+\DeclareRobustCommand{\Herwigpp}{\maybebmsf{\textsc{herwig++}}\xspace}
+\DeclareRobustCommand{\Jimmy}{\textsc{jimmy}\xspace}
+\DeclareRobustCommand{\Madgraph}{\textsc{MadGraph}\xspace}
+\DeclareRobustCommand{\NLOjetpp}{\textsc{nlojet++}\xspace}
+\DeclareRobustCommand{\Powheg}{\textsc{powheg}\xspace}
+\DeclareRobustCommand{\PowhegHerwigpp}{\Powheg+\Herwigpp\xspace}
+\DeclareRobustCommand{\PowhegPythia}{\Powheg+\Pythia\xspace}
+\DeclareRobustCommand{\Pythia}{\textsc{pythia}\xspace}
+\DeclareRobustCommand{\PythiaSix}{\textsc{pythia}~6\xspace}
+\DeclareRobustCommand{\PythiaEight}{\textsc{pythia}~8\xspace}
+\DeclareRobustCommand{\Sherpa}{\textsc{sherpa}\xspace}
+
+%% Physics terminology
+\DeclareRobustCommand{\alphas}{\maths{\alpha_S}\xspace}
+\DeclareRobustCommand{\Xs}{Cross section\xspace}
+\DeclareRobustCommand{\xs}{cross section\xspace}
+
+%% Coordinates
+\DeclareRobustCommand{\absEta}{\maths{\left|\eta\right|}\xspace}
+\DeclareRobustCommand{\DeltaR}{\maths{\Delta R}\xspace}
+
+%% Di-Higgs
+\DeclareRobustCommand{\bbyy}{\ensuremath{bb\gamma\gamma}\xspace}
+\DeclareRobustCommand{\bbbb}{\ensuremath{bbbb}\xspace}
+\DeclareRobustCommand{\bbtt}{\ensuremath{bb\tau\tau}\xspace}
+\DeclareRobustCommand{\bbVV}{\ensuremath{bbVV}\xspace}
+\DeclareRobustCommand{\WWyy}{\ensuremath{WW\gamma\gamma}\xspace}
+\DeclareRobustCommand{\hhbbyy}{\ensuremath{hh \rightarrow bb\gamma\gamma}\xspace}
+\DeclareRobustCommand{\hhyybb}{\ensuremath{hh \rightarrow \gamma\gamma bb}\xspace}
+\DeclareRobustCommand{\Xhhbbyy}{\ensuremath{X \rightarrow hh \rightarrow bb\gamma\gamma}\xspace}
+\DeclareRobustCommand{\mH}{\ensuremath{m_H}\xspace}
+\DeclareRobustCommand{\mjj}{\ensuremath{m_{jj}}\xspace}
+\DeclareRobustCommand{\mjjmin}{\ensuremath{m_{jj,min}}\xspace}
+\DeclareRobustCommand{\mjjmax}{\ensuremath{m_{jj,max}}\xspace}
+\DeclareRobustCommand{\myy}{\ensuremath{m_{\gamma\gamma}}\xspace}
+\DeclareRobustCommand{\myyjj}{\ensuremath{m_{\gamma\gamma jj}}\xspace}
+\DeclareRobustCommand{\yybb}{\ensuremath{\gamma\gamma bb}\xspace}
+\DeclareRobustCommand{\yy}{\ensuremath{\gamma \gamma}\xspace}
+\DeclareRobustCommand{\yj}{\ensuremath{\gamma j}\xspace}
+\DeclareRobustCommand{\jy}{\ensuremath{j \gamma}\xspace}
+\DeclareRobustCommand{\jj}{\ensuremath{j j}\xspace}
+\DeclareRobustCommand{\lHHH}{\ensuremath{\lambda_{HHH}}\xspace}
+\DeclareRobustCommand{\kHHH}{\ensuremath{\kappa_{\lambda}}\xspace}
+\DeclareRobustCommand{\mX}{\ensuremath{m_X}\xspace}
